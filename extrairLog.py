@@ -47,7 +47,7 @@ with open(path_log+"/logMongo.csv", "a") as log:
             resul_timeOut=0
             time_out=int(metrics_cursor_timeOut)
 
-        log.write('%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n' % (timestamp,asserts_regular,asserts_warning,asserts_msg,asserts_user,asserts_rollovers,extra_info_page_faults,connections_current,connections_available,currentQueue_total,currentQueue_readers,currentQueue_writers,locks_database_acquireCount_r,locks_database_acquireCount_w,locks_collection_acquireCount_r,locks_collection_acquireCount_w,resul_timeOut))
+        log.write(f"{timestamp};{asserts_regular};{asserts_warning};{asserts_msg};{asserts_user};{asserts_rollovers};{extra_info_page_faults};{connections_current};{connections_available};{currentQueue_total};{currentQueue_readers};{currentQueue_writers};{locks_database_acquireCount_r};{locks_database_acquireCount_w};{locks_collection_acquireCount_r};{locks_collection_acquireCount_w};{resul_timeOut}")
         
         time.sleep(300)
         pass
